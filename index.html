@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.js" type="text/javascript"></script>
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#contact-form").validate({
+                rules: {
+                    fname: "required",
+                    email: "required",
+                    txtarea: "required",
+                    fname: {
+                        required: true,
+                        minlength: 3
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    txtarea: {
+                        required: true,
+                    },
+                    agree: "required"
+                },
+                messages: {
+                    fname: "Please enter your first name",
+                    email: "Please enter a valid email address",
+                    txtarea: "Please enter this fields"
+                },
+                submitHandler: function(form) { 
+                    alert('Valid Data');
+                    return false;
+                }
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="page">
+    <!-- FORM -->
+        <form id='contact-form' action="">
+            <div class="container">
+                <p class="title-contact">Contact Us</p>
+                <input class="input-field" name='fname' type="text" placeholder="Full name">
+                <input class="input-field" name='email' type="text" placeholder="Email address">
+                <textarea class="input-field" name="txtarea" rows="5" cols="50">
+
+            </textarea>
+                <button type='submit' class="btn-submit">SUBMIT</button>
+            </div>
+        </form>
+<!-- /Form -->
+
+        <!-- Logo container -->
+        <div class="side-cont">
+<!-- Email-logo -->
+            <svg class='email-logo' version="1.0" xmlns="http://www.w3.org/2000/svg" width="100.000000pt" height="100.000000pt" viewBox="0 0 100.000000 100.000000" preserveAspectRatio="xMidYMid meet">
+                <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#5eb689" stroke="none">
+                    <path d="M435 928 c-11 -6 -35 -24 -53 -40 -30 -25 -40 -28 -107 -28 l-75 0 0
+-64 0 -65 -70 -62 -70 -63 0 -273 0 -273 440 0 440 0 0 273 0 273 -70 63 -70
+62 0 65 0 64 -75 0 c-67 0 -77 3 -107 29 -18 15 -43 33 -55 40 -28 14 -102 14
+-128 -1z m324 -280 l0 -173 -54 -43 -55 -43 -51 36 c-71 49 -127 49 -198 0
+l-51 -36 -55 43 -54 43 0 173 -1 172 260 0 260 0 -1 -172z m-458 -293 c0 -3
+-45 -42 -101 -86 l-100 -79 0 165 0 166 101 -80 c55 -44 100 -82 100 -86z
+m599 0 l0 -165 -100 79 c-56 44 -102 82 -103 85 -2 3 192 163 201 165 1 1 2
+-73 2 -164z m-180 -90 c99 -77 179 -146 180 -152 0 -10 -86 -13 -400 -13 -314
+0 -400 3 -400 13 1 6 83 76 183 155 168 132 185 142 220 140 31 -3 67 -26 217
+-143z" />
+                    <path d="M300 700 c0 -19 7 -20 200 -20 193 0 200 1 200 20 0 19 -7 20 -200
+20 -193 0 -200 -1 -200 -20z" />
+                </g>
+            </svg>
+<!-- /Email-logo -->
+<!-- Socail media logo -->
+            <div class="svg-sets">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#5eb689" stroke="none">
+                        <path d="M222 417 c-16 -17 -22 -36 -22 -70 0 -46 -1 -47 -30 -47 -28 0 -30
+               -2 -30 -40 0 -38 2 -40 30 -40 l30 0 0 -90 0 -90 40 0 40 0 0 90 0 90 34 0
+               c32 0 34 2 38 40 l4 40 -38 0 c-28 0 -38 4 -38 16 0 29 21 54 45 54 22 0 25 4
+               25 35 l0 35 -53 0 c-43 0 -58 -5 -75 -23z" />
+                    </g>
+                </svg>
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 96.000000 96.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,96.000000) scale(0.100000,-0.100000)" fill="#5eb689" stroke="none">
+                        <path d="M395 908 c-187 -16 -270 -51 -316 -132 -29 -51 -33 -125 -21 -362 11
+               -221 19 -245 94 -305 55 -43 64 -46 243 -58 172 -11 321 1 380 30 108 54 126
+               108 133 386 2 130 0 220 -7 255 -26 117 -102 173 -251 183 -47 3 -101 7 -120
+               9 -19 2 -80 -1 -135 -6z m253 -28 c111 -12 162 -35 199 -92 l28 -41 3 -216 c4
+               -272 -8 -343 -69 -394 -50 -43 -96 -56 -217 -63 -120 -7 -353 11 -390 30 -41
+               22 -91 78 -102 115 -5 18 -12 135 -16 261 -7 223 -7 228 16 274 17 35 35 54
+               73 76 87 50 282 70 475 50z" />
+                        <path d="M325 820 c-74 -8 -129 -33 -156 -72 -28 -39 -42 -155 -36 -298 7
+               -148 23 -214 60 -252 60 -60 76 -63 262 -60 204 3 259 12 308 53 54 44 62 83
+               60 292 -2 248 -24 311 -114 337 -38 11 -290 11 -384 0z m405 -38 c51 -38 62
+               -79 68 -266 6 -208 -3 -261 -54 -305 -42 -37 -73 -42 -290 -44 l-172 -2 -43
+               30 c-64 45 -73 80 -73 312 -1 178 0 193 20 220 11 15 36 36 56 46 48 23 187
+               37 338 31 100 -3 130 -7 150 -22z" />
+                        <path d="M359 678 c-46 -31 -89 -119 -96 -196 -5 -49 -2 -69 17 -107 41 -85
+               144 -128 254 -105 110 23 162 108 154 249 -3 64 -7 74 -38 107 -51 53 -102 74
+               -186 74 -57 0 -78 -4 -105 -22z m209 -22 c15 -8 43 -31 62 -51 33 -35 35 -39
+               35 -108 -1 -57 -6 -81 -25 -116 -37 -65 -66 -83 -147 -88 -58 -4 -74 -1 -113
+               19 -62 34 -90 78 -90 142 0 98 38 177 100 209 40 21 131 17 178 -7z" />
+                        <path d="M435 613 c-53 -13 -105 -103 -91 -158 8 -30 58 -82 94 -96 89 -35
+               182 33 182 135 0 78 -97 140 -185 119z m88 -32 c44 -17 67 -51 67 -99 0 -91
+               -91 -132 -172 -77 -42 28 -53 53 -44 100 13 68 79 102 149 76z" />
+                    </g>
+                </svg>
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#5eb689" stroke="none">
+                        <path d="M259 411 c-17 -17 -29 -40 -29 -55 0 -20 -5 -26 -22 -26 -33 0 -119
+               43 -147 73 -13 15 -28 24 -32 21 -13 -7 -11 -82 2 -106 8 -15 8 -19 0 -14 -19
+               12 -13 -48 7 -70 10 -10 16 -26 14 -35 -2 -10 13 -30 33 -47 l37 -30 -33 -11
+               c-17 -6 -45 -11 -60 -11 -41 0 -36 -15 11 -34 62 -25 174 -21 235 8 85 39 154
+               138 155 220 0 28 7 45 25 62 29 27 33 46 8 37 -15 -5 -16 -3 -5 8 22 24 15 40
+               -13 27 -19 -8 -31 -8 -50 0 -48 22 -104 15 -136 -17z" />
+                    </g>
+                </svg>
+            </div>
+            <!-- /social media logo -->
+        </div>
+
+    </div>
+</body>
+
+</html>

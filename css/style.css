@@ -1,0 +1,136 @@
+.page {
+    padding: 50px;
+    position: relative;
+}
+
+.container {
+    background-color: #29313c;
+    padding: 20px;
+    max-width: 450px;
+}
+
+.title-contact {
+    display: inline-block;
+    color: white;
+    background-color: #70e091;
+    font-size: 20px;
+    padding: 10px 25px;
+    font-weight: bold;
+}
+.title-contact:hover {
+    cursor: pointer;
+}
+
+.input-field {
+    display: block;
+    color: white;
+    background-color: #353c46;
+    margin: 20px 0;
+    padding: 8px 5px;
+    width: 60%;
+    outline: none;
+    border: 1px solid;
+    border-color: #353c46;
+    background-color: #565656;
+}
+
+input.error {
+    border: 1px solid;
+    border-color: #353c46;
+    border-bottom-color: red;
+}
+textarea {
+    margin-top: 20px;
+    padding: 0;
+}
+textarea.error {
+    border: 1px solid;
+    border-color: #353c46;
+    border-bottom-color: red;
+}
+label {
+    color: red;
+    display: block;
+}
+
+.btn-submit {
+    border: 2px solid #4f9f72;
+    border-radius: 5px;
+    color: #4f9f72;
+    font-size: 13px;
+    padding: 7px 40px;
+    background-color: #29313c;
+    outline: none;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+}
+
+.side-cont {
+    background-color: #29313c;
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    width: 300px;
+    top: 115px;
+    left: 420px;
+    border: 1px solid;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0 7px 27px;
+}
+
+.email-logo {
+    display: block;
+    margin: auto;
+    max-width: 500px;
+}
+
+.svg-sets {
+    margin: auto;
+    max-width: 155px;
+    margin-top: 20px;
+}
+
+svg {
+    margin: 0 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    .page {
+        width: 100%;
+        padding: 0;
+        position: static;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .side-cont {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+        max-width: none;
+    }
+
+    .input-field {
+        width: 70%;
+        margin-top: 40px;
+    }
+
+    .svg-sets {
+        min-height: 144px;
+    }
+}
